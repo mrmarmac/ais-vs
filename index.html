@@ -87,6 +87,18 @@
     </section>
   </main>
 
+  <!-- ===== BACKGROUND AUDIO ===== -->
+  <audio id="bgAudio" src="assets/the-final-banner.mp3" loop preload="auto"></audio>
+  <button id="audioToggle" class="audio-toggle" type="button" aria-label="Pause background music" aria-pressed="true">
+    <svg class="audio-toggle__icon audio-toggle__icon--pause" viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="6" y="5" width="4" height="14" rx="1"></rect>
+      <rect x="14" y="5" width="4" height="14" rx="1"></rect>
+    </svg>
+    <svg class="audio-toggle__icon audio-toggle__icon--play" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M8 5v14l11-7z"></path>
+    </svg>
+  </button>
+
   <script src="app.js"></script>
 </body>
 </html>

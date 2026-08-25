@@ -283,3 +283,40 @@ a { color: inherit; text-decoration: none; }
   .versus__side--b { padding-left: 8px; }
   .versus__desc { font-size: .62rem; }
 }
+
+/* ============================================================
+   BACKGROUND AUDIO TOGGLE
+   ============================================================ */
+.audio-toggle {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 60;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  cursor: pointer;
+  color: var(--ink);
+  background: rgba(18, 18, 22, .72);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: color .2s var(--ease), border-color .2s var(--ease),
+              background .2s var(--ease), transform .2s var(--ease);
+}
+.audio-toggle:hover { color: var(--orange); border-color: var(--orange); transform: translateY(-1px); }
+.audio-toggle:focus-visible { outline: 2px solid var(--orange); outline-offset: 2px; }
+.audio-toggle__icon { width: 20px; height: 20px; fill: currentColor; }
+/* Default state = playing → show pause glyph */
+.audio-toggle__icon--play { display: none; }
+.audio-toggle__icon--pause { display: block; }
+/* Paused state → show play glyph */
+.audio-toggle.is-paused .audio-toggle__icon--play { display: block; }
+.audio-toggle.is-paused .audio-toggle__icon--pause { display: none; }
+
+@media (max-width: 620px) {
+  .audio-toggle { right: 12px; bottom: 12px; }
+}
