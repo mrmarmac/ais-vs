@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AIS:VS — AI Safety Versus</title>
-  <meta name="description" content="AI Safety Versus (AIS:VS): the inter-city AI safety hackathon league. Global city hubs go head-to-head in technical alignment and governance sprints. This weekend: LISA (London) vs CAISH (Cambridge)." />
+  <title>AIS:VS — LISA vs CAISH</title>
+  <meta name="description" content="AI Safety Versus (AIS:VS) — LISA (London) vs CAISH (Cambridge). 3 hours. 2 hubs. 1 winner." />
   <meta name="theme-color" content="#0a0a0c" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="AIS:VS — AI Safety Versus" />
-  <meta property="og:description" content="3 Hours. 2 Hubs. 1 Winner. LISA vs CAISH — this Saturday, high-noon." />
+  <meta property="og:title" content="AIS:VS — LISA vs CAISH" />
+  <meta property="og:description" content="3 Hours. 2 Hubs. 1 Winner." />
   <meta property="og:type" content="website" />
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
@@ -26,31 +25,21 @@
     <div class="ticker__track" id="tickerTrack"></div>
   </div>
 
-  <!-- ===== NAV ===== -->
-  <header class="nav" id="nav">
+  <!-- ===== NAV (brand only) ===== -->
+  <header class="nav">
     <div class="nav__inner">
       <a href="#top" class="brand" aria-label="AIS:VS home">
         <span class="brand__mark">AIS:VS</span>
         <span class="brand__sub">AI&nbsp;SAFETY&nbsp;VERSUS</span>
       </a>
-      <nav class="nav__links" id="navLinks">
-        <a href="#matchup">Matchup</a>
-        <a href="#format">Format</a>
-        <a href="#hubs">Hubs</a>
-        <a href="#standings">Standings</a>
-        <a href="#apply">Apply</a>
-        <a href="#register" class="btn btn--sm btn--solid">Register</a>
-      </nav>
-      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </header>
 
   <main id="top">
     <!-- ===== HERO / VERSUS ===== -->
-    <section class="hero" id="hero">
+    <section class="hero">
       <div class="hero__grid-bg" aria-hidden="true"></div>
+
       <div class="hero__meta-top">
         <span class="tag tag--live"><span class="dot"></span>LIVE SEASON 01</span>
         <span class="tag">3 HOURS · 2 HUBS · 1 WINNER</span>
@@ -64,7 +53,6 @@
         </div>
 
         <div class="versus__vs" aria-hidden="true">
-          <span class="versus__slash"></span>
           <span class="versus__vstext">VS</span>
         </div>
 
@@ -76,9 +64,9 @@
       </div>
 
       <!-- Countdown -->
-      <div class="countdown" id="countdown" aria-label="Countdown to next round">
+      <div class="countdown" aria-label="Countdown to next round">
         <span class="countdown__label">NEXT ROUND STARTS IN</span>
-        <div class="countdown__clock" id="clock">
+        <div class="countdown__clock">
           <div class="cd"><span id="cd-d">00</span><small>DAYS</small></div>
           <span class="cd__sep">:</span>
           <div class="cd"><span id="cd-h">00</span><small>HRS</small></div>
@@ -96,264 +84,8 @@
         <div class="metacard"><span class="metacard__k">WHERE</span><span class="metacard__v">Your local hub</span></div>
         <div class="metacard"><span class="metacard__k">ENTRY</span><span class="metacard__v">Free</span></div>
       </div>
-
-      <div class="hero__cta">
-        <a href="#register" class="btn btn--solid btn--lg">Register Now →</a>
-        <a href="#format" class="btn btn--ghost btn--lg">How it works</a>
-      </div>
-    </section>
-
-    <!-- ===== LIVE SCOREBOARD ===== -->
-    <section class="scoreboard reveal" id="scoreboard">
-      <div class="section-head">
-        <span class="eyebrow">// LIVE SCOREBOARD</span>
-        <h2 class="section-title">Round <span class="accent">02</span> — Bot Brawl</h2>
-      </div>
-
-      <div class="board">
-        <div class="board__team board__team--a">
-          <div class="board__name">LISA</div>
-          <div class="board__score" data-count="142">0</div>
-          <div class="board__meter"><i style="--w:71%"></i></div>
-        </div>
-
-        <div class="board__center">
-          <span class="board__status"><span class="dot"></span>IN PROGRESS</span>
-          <span class="board__round">R2 / R3</span>
-          <span class="board__timer" id="boardTimer">41:07</span>
-        </div>
-
-        <div class="board__team board__team--b">
-          <div class="board__name">CAISH</div>
-          <div class="board__score" data-count="138">0</div>
-          <div class="board__meter board__meter--b"><i style="--w:69%"></i></div>
-        </div>
-      </div>
-
-      <div class="board__rounds">
-        <div class="roundpill roundpill--done"><span>R1 · Red-Team Sprint</span><b>LISA 48 – 44 CAISH</b></div>
-        <div class="roundpill roundpill--live"><span>R2 · Bot Brawl</span><b class="live-txt"><span class="dot"></span>LIVE</b></div>
-        <div class="roundpill"><span>R3 · Governance Gauntlet</span><b>Locked</b></div>
-      </div>
-    </section>
-
-    <!-- ===== ABOUT ===== -->
-    <section class="about reveal" id="about">
-      <div class="section-head">
-        <span class="eyebrow">// WHAT IS AIS:VS</span>
-        <h2 class="section-title">An inter-city league for<br />people who take alignment <span class="accent">seriously</span>.</h2>
-      </div>
-      <div class="about__grid">
-        <p class="about__lede">AI&nbsp;Safety&nbsp;Versus pits global city hubs against each other in fast, high-stakes sprints across technical alignment and governance. Same problems, same clock — real research energy, esports pacing. Three hours. Two hubs. One winner.</p>
-        <div class="statgrid">
-          <div class="stat"><b>8</b><span>City hubs</span></div>
-          <div class="stat"><b>3h</b><span>Per versus</span></div>
-          <div class="stat"><b>3</b><span>Sprint rounds</span></div>
-          <div class="stat"><b>∞</b><span>Bragging rights</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== FORMAT ===== -->
-    <section class="format reveal" id="format">
-      <div class="section-head">
-        <span class="eyebrow">// THE FORMAT</span>
-        <h2 class="section-title">One versus. <span class="accent">Three</span> rounds.</h2>
-        <p class="section-sub">Every hub fields its best. Points carry across rounds. The scoreboard is live and public — no hiding.</p>
-      </div>
-
-      <div class="cards">
-        <article class="card">
-          <span class="card__idx">01</span>
-          <h3 class="card__title">Red-Team Sprint</h3>
-          <p class="card__body">Break a frontier-style model. Jailbreaks, prompt-injection, spec-gaming — every confirmed exploit banks points for your hub.</p>
-          <span class="card__tag">45 MIN · TECHNICAL</span>
-        </article>
-        <article class="card card--accent">
-          <span class="card__idx">02</span>
-          <h3 class="card__title">Bot Brawl</h3>
-          <p class="card__body">Ship an aligned agent and send it into the arena. Head-to-head evals score helpfulness, honesty, and harmlessness under pressure.</p>
-          <span class="card__tag">90 MIN · BUILD</span>
-        </article>
-        <article class="card">
-          <span class="card__idx">03</span>
-          <h3 class="card__title">Governance Gauntlet</h3>
-          <p class="card__body">Draft policy under a live crisis scenario. A panel of judges scores rigor, feasibility, and the sharpest cross-examination wins the room.</p>
-          <span class="card__tag">45 MIN · POLICY</span>
-        </article>
-      </div>
-    </section>
-
-    <!-- ===== MATCHUP ===== -->
-    <section class="matchup reveal" id="matchup">
-      <div class="section-head">
-        <span class="eyebrow">// THE MATCHUP</span>
-        <h2 class="section-title">Head&#8209;to&#8209;head</h2>
-      </div>
-
-      <div class="h2h">
-        <div class="h2h__col h2h__col--a">
-          <div class="h2h__crest">LISA</div>
-          <div class="h2h__city">London</div>
-          <div class="h2h__cap">Captain · <b>Dr. A. Okafor</b></div>
-        </div>
-
-        <div class="h2h__mid">
-          <div class="h2h__row"><span class="h2h__a">7-2</span><em>SEASON RECORD</em><span class="h2h__b">6-3</span></div>
-          <div class="h2h__row"><span class="h2h__a">1,204</span><em>ELO</em><span class="h2h__b">1,188</span></div>
-          <div class="h2h__row"><span class="h2h__a">32</span><em>ROSTER</em><span class="h2h__b">28</span></div>
-          <div class="h2h__row"><span class="h2h__a">3</span><em>TITLES</em><span class="h2h__b">2</span></div>
-          <div class="h2h__row h2h__row--head"><span class="h2h__a">4</span><em>LAST 5 MEETINGS</em><span class="h2h__b">1</span></div>
-        </div>
-
-        <div class="h2h__col h2h__col--b">
-          <div class="h2h__crest">CAISH</div>
-          <div class="h2h__city">Cambridge</div>
-          <div class="h2h__cap">Captain · <b>M. Lindqvist</b></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== CITY HUBS ===== -->
-    <section class="hubs reveal" id="hubs">
-      <div class="section-head">
-        <span class="eyebrow">// THE LEAGUE</span>
-        <h2 class="section-title">Eight hubs. <span class="accent">One</span> arena.</h2>
-        <p class="section-sub">City hubs qualify through the season. Don't see yours? Bring the league to your city →</p>
-      </div>
-      <div class="hubgrid" id="hubgrid"><!-- injected by app.js --></div>
-    </section>
-
-    <!-- ===== STANDINGS ===== -->
-    <section class="standings reveal" id="standings">
-      <div class="section-head">
-        <span class="eyebrow">// SEASON 01 STANDINGS</span>
-        <h2 class="section-title">The ladder</h2>
-      </div>
-      <div class="table-wrap">
-        <table class="ladder">
-          <thead>
-            <tr><th>#</th><th>Hub</th><th>City</th><th class="num">W</th><th class="num">L</th><th class="num">ELO</th><th class="num">Form</th></tr>
-          </thead>
-          <tbody id="ladderBody"><!-- injected by app.js --></tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- ===== SCHEDULE ===== -->
-    <section class="schedule reveal" id="schedule">
-      <div class="section-head">
-        <span class="eyebrow">// RUN OF SHOW</span>
-        <h2 class="section-title">Three hours, no filler</h2>
-      </div>
-      <ol class="timeline">
-        <li><span class="timeline__t">11:45</span><div><b>Doors &amp; check-in</b><p>Grab a seat at your local hub. Terminals warm up.</p></div></li>
-        <li><span class="timeline__t">12:00</span><div><b>R1 · Red-Team Sprint</b><p>The clock starts. First blood on the scoreboard.</p></div></li>
-        <li><span class="timeline__t">12:45</span><div><b>R2 · Bot Brawl</b><p>Agents enter the arena. Live head-to-head evals.</p></div></li>
-        <li><span class="timeline__t">14:15</span><div><b>R3 · Governance Gauntlet</b><p>Policy under fire. Judges cross-examine.</p></div></li>
-        <li><span class="timeline__t">15:00</span><div><b>Verdict &amp; trophy</b><p>Final scores locked. One hub takes the belt.</p></div></li>
-      </ol>
-    </section>
-
-    <!-- ===== APPLY: NODE CAPTAIN + NEWSLETTER ===== -->
-    <section class="apply reveal" id="apply">
-      <div class="apply__grid">
-        <div class="apply__intro">
-          <span class="eyebrow">// NODE CAPTAIN PROGRAM</span>
-          <h2 class="section-title">Bring AIS:VS<br />to <span class="accent">your city</span>.</h2>
-          <p class="section-sub">Node Captains run a local hub — find a venue, rally hackers, and put your city on the ladder. We handle the format, problems, judges, and live scoring. You bring the room.</p>
-          <ul class="perks">
-            <li>Full event kit &amp; problem sets</li>
-            <li>Judge panel + live scoreboard access</li>
-            <li>Travel support for finals</li>
-            <li>A seat on the league council</li>
-          </ul>
-        </div>
-
-        <form class="form" id="captainForm" novalidate>
-          <h3 class="form__title">Apply to captain a hub</h3>
-
-          <div class="field">
-            <label for="f-name">Your name</label>
-            <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Ada Lovelace" />
-            <span class="field__err" data-for="name"></span>
-          </div>
-
-          <div class="field">
-            <label for="f-email">Email</label>
-            <input id="f-email" name="email" type="email" autocomplete="email" required placeholder="you@city.org" />
-            <span class="field__err" data-for="email"></span>
-          </div>
-
-          <div class="field">
-            <label for="f-city">City</label>
-            <input id="f-city" name="city" type="text" required placeholder="e.g. Toronto" />
-            <span class="field__err" data-for="city"></span>
-          </div>
-
-          <div class="field">
-            <label for="f-venue">Venue ideas</label>
-            <input id="f-venue" name="venue" type="text" placeholder="University lab, coworking space…" />
-          </div>
-
-          <div class="field">
-            <label for="f-capacity">Estimated hacker capacity</label>
-            <select id="f-capacity" name="capacity" required>
-              <option value="" disabled selected>Choose a range…</option>
-              <option>Under 20</option>
-              <option>20–50</option>
-              <option>50–100</option>
-              <option>100+</option>
-            </select>
-            <span class="field__err" data-for="capacity"></span>
-          </div>
-
-          <div class="field">
-            <label for="f-note">Why your city? <span class="opt">(optional)</span></label>
-            <textarea id="f-note" name="note" rows="3" placeholder="Tell us about your community…"></textarea>
-          </div>
-
-          <button type="submit" class="btn btn--solid btn--block">Submit application</button>
-          <p class="form__ok" id="formOk" hidden>✓ Application received. We'll be in touch at the email above.</p>
-        </form>
-      </div>
-
-      <!-- Newsletter -->
-      <div class="newsletter" id="register">
-        <div class="newsletter__text">
-          <span class="eyebrow">// STAY IN THE LOOP</span>
-          <h3>Get match alerts, drops &amp; results.</h3>
-          <p>No spam. Just the scoreboard, the schedule, and the occasional trash talk.</p>
-        </div>
-        <form class="newsletter__form" id="newsForm" novalidate>
-          <input id="newsEmail" type="email" required placeholder="you@email.com" aria-label="Email address" />
-          <button type="submit" class="btn btn--solid">Subscribe</button>
-          <p class="newsletter__ok" id="newsOk" hidden>✓ You're on the list.</p>
-        </form>
-      </div>
     </section>
   </main>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="footer__top">
-      <div class="brand">
-        <span class="brand__mark">AIS:VS</span>
-        <span class="brand__sub">AI&nbsp;SAFETY&nbsp;VERSUS</span>
-      </div>
-      <nav class="footer__links">
-        <a href="#matchup">Matchup</a>
-        <a href="#format">Format</a>
-        <a href="#hubs">Hubs</a>
-        <a href="#standings">Standings</a>
-        <a href="#apply">Apply</a>
-      </nav>
-    </div>
-    <div class="footer__bar">
-      <span>© <span id="year"></span> AI Safety Versus — Season 01</span>
-      <span class="footer__cities">London · Cambridge · Oxford · SF · Berlin · Paris · Singapore · Lisbon</span>
-    </div>
-  </footer>
 
   <script src="app.js"></script>
 </body>
