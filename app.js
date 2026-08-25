@@ -43,10 +43,49 @@
     set("#cd-s", s % 60);
   }
 
+  /* ---------- background audio + play/pause toggle ---------- */
+  function setupAudio() {
+    const audio = $("#bgAudio");
+    const btn = $("#audioToggle");
+    if (!audio || !btn) return;
+
+    audio.volume = 0.6;
+
+    const reflect = () => {
+      const paused = audio.paused;
+      btn.classList.toggle("is-paused", paused);
+      btn.setAttribute("aria-pressed", String(!paused));
+      btn.setAttribute("aria-label", paused ? "Play background music" : "Pause background music");
+    };
+
+    // Try to start playback on load. Browsers often block autoplay with sound
+    // until the visitor interacts, so fall back to starting on first gesture.
+    const tryPlay = () => audio.play().then(reflect).catch(reflect);
+
+    tryPlay().then(() => {
+      if (audio.paused) {
+        const kick = () => { audio.play().then(reflect).catch(reflect); };
+        const opts = { once: true };
+        window.addEventListener("pointerdown", kick, opts);
+        window.addEventListener("keydown", kick, opts);
+      }
+    });
+
+    btn.addEventListener("click", () => {
+      if (audio.paused) audio.play().then(reflect).catch(reflect);
+      else { audio.pause(); reflect(); }
+    });
+
+    audio.addEventListener("play", reflect);
+    audio.addEventListener("pause", reflect);
+    reflect();
+  }
+
   function init() {
     buildTicker();
     tickCountdown();
     setInterval(tickCountdown, 1000);
+    setupAudio();
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
